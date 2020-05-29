@@ -29,3 +29,17 @@
 
 主网的数据类型为json，数据流顶针续麻，你只需要解析json即可
 
+
+## 关于SuperCurl，CURL等概念说明
+
+SuperCurl是一个底层连接发送器，这个发送器不带返回功能，不对程序内部的发起负责，执行后不管成功失败，这个SuperCurl仅需要对tcp负责即可
+
+CURL，CURL是一个带有返回功能的发送器，需要对程序负责，一般用于本地显示以及登录模块中，CURL模块本身不具有任何的Header/Cookie把控能力，是最初级的发送功能
+
+Net，Net是一个高级的发送器，在C#中使用HttpWebRequest实现，在Go中使用TuuzGo的NetPost实现，在PHP中使用curl_opt实现，其他程序请自行找到对应的执行器
+
+
+
+## 关于ActionRoute
+
+ActionRoute是程序中用来接收处理TCP消息的转发器，将对应的功能转发到对用的function模块中，是tcp消息的搬运工
