@@ -16,3 +16,6 @@ ret的返回值为0或者不为0，不为0的时候data里面是错误信息stri
 
     STRING username=ret.data["username"];
     STRING token=ret.data["token"];
+    
+    
+将username和token保存即可，至此登录部分全部结束
