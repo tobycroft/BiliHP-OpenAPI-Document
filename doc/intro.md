@@ -42,4 +42,4 @@ Net，Net是一个高级的发送器，在C#中使用HttpWebRequest实现，在G
 
 ## 关于ActionRoute
 
-ActionRoute是程序中用来接收处理TCP消息的转发器，将对应的功能转发到对用的function模块中，是tcp消息的搬运工
+ActionRoute是程序中用来接收处理TCP消息的转发器，将对应的功能转发到对用的function模块中，用于识别tcp的路由是做转发处理还是做解析处理
