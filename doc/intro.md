@@ -34,13 +34,34 @@
 
 SuperCurl是一个底层连接发送器，这个发送器不带返回功能，不对程序内部的发起负责，执行后不管成功失败，这个SuperCurl的返回信息仅需要转发给TCP即可，SuperCurl依赖下面的Net模块完成
 
+SuperCURL的执行方法看各位程序中的执行方式，每个语言都有类似但是不同的SuperCURL写法，所以这里不固定，请参考Go或者C#版本的Demo
+
+
+
 
 CURL，CURL是一个带有返回功能的发送器，需要对程序负责，一般用于本地显示以及登录模块中，CURL模块本身不具有任何的Header/Cookie把控能力，是最初级的发送功能，返回的是最基础的JSON数据
+
+CURL的执行方法是：
+
+CURL(地址,参数)
 
 
 Net，Net是一个高级的发送器，在C#中使用HttpWebRequest实现，在Go中使用TuuzGo的NetPost实现，在PHP中使用curl_opt实现，其他程序请自行找到对应的执行器
 
 Net执行器中分为两种，一个是Net.Post一个是Net.Get，分别对应Post和Get方法，还有一个是Net.Combi，在Combi方法中，可以通过传入method方法，动态调用Post或者Get方法
+
+Net的设定方法为：
+
+    Net.SetHeader()//设定头部
+    
+    Net.SetCookie()//设定Cookie
+    
+    Net.Method()//使用netcombi方法的时候需要设定的参数
+    
+    Net.Post/Net.Get/Net.Combi(地址,参数)
+
+
+Browser，Browser是一个浏览器方法，执行体为Browser(url)
 
 
 
