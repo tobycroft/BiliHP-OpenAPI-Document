@@ -1,5 +1,9 @@
 # BiliHP-2020-2028闪电网络接入文档
 
+## 文档地址
+
+    [文档地址](./doc/list.md)
+
 ## 闪电网络介绍
 
 闪电网络是一个TCP-Multicast/UDP-Multicast网络，采用了TCP/UDP双架构，是一个去中心化网络
