@@ -43,7 +43,8 @@ CURL，CURL是一个带有返回功能的发送器，需要对程序负责，一
 
 CURL的执行方法是：
 
-CURL(地址,参数)
+    CURL.Post(地址,参数)
+    CURL.Get(地址,参数)
 
 
 Net，Net是一个高级的发送器，在C#中使用HttpWebRequest实现，在Go中使用TuuzGo的NetPost实现，在PHP中使用curl_opt实现，其他程序请自行找到对应的执行器
